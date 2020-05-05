@@ -1,4 +1,4 @@
-const data = [
+export const data = [
   {
     id: 1,
     name: "Big Knife",
@@ -59,5 +59,24 @@ const data = [
     category: "Thailand",
     image: require("../src/images/thai.jpg"),
   },
+  {
+    id: 7,
+    name: "Carnivore",
+    Location: "Langata",
+    openingHours: "7am-9pm",
+    website: "www.Kilimanjaro.com",
+    phoneNumber: 666666555,
+    category: "contemprary",
+    image: require("../src/images/humburger.jpg"),
+  },
+  {
+    id: 8,
+    name: "Taj Sultan",
+    Location: "South C",
+    openingHours: "7am-9pm",
+    website: "www.Kilimanjaro.com",
+    phoneNumber: 666666555,
+    category: "Arab",
+    image: require("../src/images/humburger.jpg"),
+  },
 ];
-export default data;
