@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 
-class Footer extends Component {
+class NotFoundPage extends Component {
   render() {
     return (
       <div>
-        <h1>Footer</h1>
+        <h1>Not Found Page...</h1>
       </div>
     );
   }
 }
-export default Footer;
+export default NotFoundPage;

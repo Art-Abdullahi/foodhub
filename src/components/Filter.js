@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import "../styles/Filter.css";
 class Filter extends Component {
   state = {
     category: "",
@@ -14,14 +14,14 @@ class Filter extends Component {
       "Thailand",
     ];
     return (
-      <div className="container text-center">
+      <div className="intro text-center">
         <form
           onChange={() =>
             setTimeout(() => this.props.updateFilter(this.state), 0)
           }
         >
           <label>
-            Filter By Category
+            <h3>Find the best Resturants in Nairobi</h3>
             <select
               className="form-control"
               value={this.state.category}

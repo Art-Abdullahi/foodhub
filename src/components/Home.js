@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import Info from "./Info";
 import { InfoConsumer } from "./Context";
 import Filter from "./Filter";
@@ -11,6 +12,7 @@ class Home extends Component {
           return (
             <React.Fragment>
               <Filter updateFilter={updateFilter} />
+              <h3 className="text-center">Best resturants In Nairobi</h3>
               <div className="row">
                 {resturants.map((resturant) => (
                   <Info

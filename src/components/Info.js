@@ -22,6 +22,9 @@ class Info extends Component {
                 <p className="card-text">{Location}</p>
                 <small className="card-text">{category}</small>
               </div>
+              <a href="/details" className="btn btn-lg btn-primary">
+                Explore
+              </a>
             </div>
           </div>
         )}
