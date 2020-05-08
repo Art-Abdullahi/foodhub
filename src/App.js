@@ -13,10 +13,14 @@ function App() {
     <div>
       <Navigator />
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/details" component={Details} />
-        <Route component={NotFoundPage} />
+        <Route exact path="/" render={(props) => <Home {...props} />} />
+        <Route exact path="/about" render={(props) => <About {...props} />} />
+        <Route
+          exact
+          path={`/details/:id`}
+          render={(props) => <Details {...props} />}
+        />
+        <Route exact component={NotFoundPage} />
       </Switch>
       <Footer />
     </div>

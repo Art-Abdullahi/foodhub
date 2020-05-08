@@ -1,24 +1,24 @@
 import React, { Component } from "react";
 import { InfoConsumer } from "./Context";
-export default class Deatils extends Component {
+import { withRouter } from "react-router-dom";
+class Details extends Component {
   render() {
     return (
       <InfoConsumer>
         {(value) => {
-          const {
-            id,
-            name,
-            Location,
-            openingHours,
-            website,
-            category,
-            image,
-            phoneNumber,
-          } = value.resturants;
+          const { resturants } = value;
           return (
             <React.Fragment>
               <div className="container-fluid align-items-center">
-                <h1 className="display-1 font-weight-bold">Details Page....</h1>
+                {resturants.map((key) => (
+                  <div key={key.id}>
+                    {key.id === parseInt(this.props.match.params.id) ? (
+                      <h1>{key.name}</h1>
+                    ) : (
+                      <span></span>
+                    )}
+                  </div>
+                ))}
               </div>
             </React.Fragment>
           );
@@ -27,3 +27,4 @@ export default class Deatils extends Component {
     );
   }
 }
+export default withRouter(Details);

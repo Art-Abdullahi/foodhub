@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 import { InfoConsumer } from "./Context.js";
+import { withRouter } from "react-router-dom";
 class Info extends Component {
+  goToDetails = (id) => {
+    this.props.history.push({
+      pathname: `/details/${this.props.resturant.id}`,
+    });
+  };
   render() {
     const { id, name, Location, category, image } = this.props.resturant;
 
@@ -22,9 +28,13 @@ class Info extends Component {
                 <p className="card-text">{Location}</p>
                 <small className="card-text">{category}</small>
               </div>
-              <a href="/details" className="btn btn-lg btn-primary">
+
+              <button
+                className="btn btn-lg btn-primary"
+                onClick={this.goToDetails}
+              >
                 Explore
-              </a>
+              </button>
             </div>
           </div>
         )}
@@ -32,4 +42,4 @@ class Info extends Component {
     );
   }
 }
-export default Info;
+export default withRouter(Info);
