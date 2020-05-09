@@ -13,7 +13,18 @@ class Details extends Component {
                 {resturants.map((key) => (
                   <div key={key.id}>
                     {key.id === parseInt(this.props.match.params.id) ? (
-                      <h1>{key.name}</h1>
+                      <div>
+                        <img
+                          src={key.image}
+                          alt="pic"
+                          style={{
+                            height: "350px",
+                            objectFit: "cover",
+                            width: "100%",
+                          }}
+                        />
+                        <h1>{key.name}</h1>
+                      </div>
                     ) : (
                       <span></span>
                     )}

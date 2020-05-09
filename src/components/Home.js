@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-
+import "../styles/Grid.css";
 import Info from "./Info";
 import { InfoConsumer } from "./Context";
 import Filter from "./Filter";
+import Header from "./Header";
 class Home extends Component {
   render() {
     return (
@@ -11,9 +12,10 @@ class Home extends Component {
           const { resturants, updateFilter } = value;
           return (
             <React.Fragment>
+              <Header />
               <Filter updateFilter={updateFilter} />
-              <h3 className="text-center">Best resturants In Nairobi</h3>
-              <div className="row">
+
+              <div className="grid container-fluid">
                 {resturants.map((resturant) => (
                   <Info
                     key={resturant.id}

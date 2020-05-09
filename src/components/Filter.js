@@ -14,14 +14,16 @@ class Filter extends Component {
       "Thailand",
     ];
     return (
-      <div className="intro text-center">
+      <div className="container text-center">
         <form
           onChange={() =>
             setTimeout(() => this.props.updateFilter(this.state), 0)
           }
         >
           <label>
-            <h3>Find the best Resturants in Nairobi</h3>
+            <h3 style={{ fontSize: "1rem" }}>
+              Find the best Resturants in Nairobi
+            </h3>
             <select
               className="form-control"
               value={this.state.category}
