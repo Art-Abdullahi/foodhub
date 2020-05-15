@@ -1,38 +1,39 @@
-import React, { useState } from "react";
+import React, { Component } from "react";
+import { FaAlignRight } from "react-icons/fa";
+import "../App.css";
 import { Link } from "react-router-dom";
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-} from "reactstrap";
-import "../styles/Nav.css";
-const Navigator = (props) => {
-  const [isOpen, setIsOpen] = useState(false);
 
-  const toggle = () => setIsOpen(!isOpen);
+export default class Navigator extends Component {
+  state = {
+    toggle: false,
+  };
+  Toggle = () => {
+    this.setState({ toggle: !this.state.toggle });
+  };
+  render() {
+    return (
+      <>
+        <nav className="navBar">
+          <div className="brand-title">FOODHUB</div>
 
-  return (
-    <div>
-      <Navbar className="navigation" light expand="md">
-        <NavbarBrand href="/">FOODHUB</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="m-auto" navbar>
-            <Link to="/">
-              <NavItem className="nav-links mr-5">Resturants</NavItem>
-            </Link>
-            <Link to="/about">
-              {" "}
-              <NavItem className="nav-links ml-5">About</NavItem>
-            </Link>
-          </Nav>
-        </Collapse>
-      </Navbar>
-    </div>
-  );
-};
+          <FaAlignRight className="toggle-button" onClick={this.Toggle} />
 
-export default Navigator;
+          <div
+            className={
+              this.state.toggle ? "navbar-links navbar-active" : "navbar-links"
+            }
+          >
+            <ul>
+              <li>
+                <Link to="/">Resturants</Link>
+              </li>
+              <li>
+                <Link to="/about">About</Link>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </>
+    );
+  }
+}
