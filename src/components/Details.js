@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { InfoConsumer } from "./Context";
 import { withRouter } from "react-router-dom";
+
+import Switch from "./Tabs";
 class Details extends Component {
   render() {
     return (
@@ -13,17 +15,29 @@ class Details extends Component {
                 {resturants.map((key) => (
                   <div key={key.id}>
                     {key.id === parseInt(this.props.match.params.id) ? (
-                      <div>
-                        <img
-                          src={key.image}
-                          alt="pic"
-                          style={{
-                            height: "350px",
-                            objectFit: "cover",
-                            width: "100%",
-                          }}
-                        />
-                        <h1>{key.name}</h1>
+                      <div className="container details">
+                        <div className="up">
+                          <h1>{key.name}</h1>
+                          <img
+                            src={key.image}
+                            alt="pic"
+                            style={{
+                              height: "40vh",
+                              objectFit: "cover",
+                              width: "100%",
+                            }}
+                          />
+                        </div>
+                        <div className="tabs mt-5">
+                          <Switch
+                            openingHours={key.openingHours}
+                            category={key.category}
+                            location={key.Location}
+                            website={key.website}
+                            phoneNumber={key.phoneNumber}
+                            reviews={key.reviews}
+                          />
+                        </div>
                       </div>
                     ) : (
                       <span></span>

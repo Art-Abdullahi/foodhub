@@ -4,6 +4,7 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 .navBar {
   display: flex;
@@ -42,6 +43,49 @@ body {
   height: 21px;
 }
 
+.details {
+  height: 100vh;
+  grid-template-rows: auto auto;
+}
+
+.information {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 20px;
+}
+
+.up {
+  height: 50vh;
+}
+
+.tabs {
+  height: 50vh;
+}
+
+.reviews {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.rating {
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.fa {
+  font-size: 3rem;
+  color: brown;
+}
+
+.rate {
+  font-weight: bolder;
+}
+
+.recent-review {
+  display: flex;
+}
 @media (max-width: 480px) {
   .toggle-button {
     display: flex;
@@ -67,5 +111,18 @@ body {
   }
   .navbar-active {
     display: flex;
+  }
+
+  .information {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+  }
+  .reviews {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+  }
+  .fa {
+    font-size: 2rem;
+    color: brown;
   }
 }

@@ -1,7 +1,6 @@
 import React from "react";
 import Navigator from "../src/components/Navbar";
 import "./App.css";
-import Footer from "./components/Footer";
 
 import { Switch, Route } from "react-router-dom";
 
@@ -26,8 +25,6 @@ function App() {
         />
         <Route exact component={NotFoundPage} />
       </Switch>
-
-      <Footer />
     </div>
   );
 }
