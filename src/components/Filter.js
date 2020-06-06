@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../styles/Filter.css";
+
 class Filter extends Component {
   state = {
     category: "",
@@ -21,9 +21,7 @@ class Filter extends Component {
           }
         >
           <label>
-            <h3 style={{ fontSize: "1rem" }}>
-              Find the best Resturants in Nairobi
-            </h3>
+            <h1>Find the best Resturants in Nairobi</h1>
             <select
               className="form-control"
               value={this.state.category}

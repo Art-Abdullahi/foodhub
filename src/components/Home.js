@@ -13,16 +13,17 @@ class Home extends Component {
           return (
             <React.Fragment>
               <Header />
-              <Filter updateFilter={updateFilter} />
-
-              <div className="grid container-fluid">
-                {resturants.map((resturant) => (
-                  <Info
-                    key={resturant.id}
-                    resturant={resturant}
-                    filteredResturants={value.filteredResturants}
-                  />
-                ))}
+              <div className="mt-5">
+                <Filter updateFilter={updateFilter} />
+                <div className="grid container-fluid">
+                  {resturants.map((resturant) => (
+                    <Info
+                      key={resturant.id}
+                      resturant={resturant}
+                      filteredResturants={value.filteredResturants}
+                    />
+                  ))}
+                </div>
               </div>
             </React.Fragment>
           );
