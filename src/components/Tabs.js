@@ -1,9 +1,13 @@
 import React, { Component } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import Map from "./Map";
 import { FaStar } from "react-icons/fa";
 import "react-tabs/style/react-tabs.css";
 import image from "../images/avatar.svg";
 export default class Switch extends Component {
+  componentDidMount() {
+    window.scroll(0, 0);
+  }
   render() {
     const {
       openingHours,
@@ -16,9 +20,12 @@ export default class Switch extends Component {
     return (
       <div>
         <Tabs>
-          <TabList>
+          <TabList
+            style={{ background: "#f59600", color: "rgba(54, 51, 51, 1)" }}
+          >
             <Tab>INFORMATION</Tab>
             <Tab>REVIEWS</Tab>
+            <Tab>MAP</Tab>
           </TabList>
 
           <TabPanel>
@@ -77,6 +84,9 @@ export default class Switch extends Component {
                 ))}
               </div>
             </div>
+          </TabPanel>
+          <TabPanel>
+            <Map />
           </TabPanel>
         </Tabs>
       </div>
