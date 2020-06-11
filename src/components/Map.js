@@ -6,7 +6,7 @@ import { FaMapMarker } from "react-icons/fa";
 const Map = () => {
   const [viewport, setviewport] = useState({
     width: "90vw",
-    height: "70vh",
+    height: "100vh",
     latitude: 1.4419683,
     longitude: 38.4313975,
     zoom: 8,
@@ -23,8 +23,8 @@ const Map = () => {
       {data.map((resturant) => (
         <Marker
           key={resturant.id}
-          latitude={resturant.coordinates[1]}
-          longitude={resturant.coordinates[0]}
+          latitude={resturant.latitude}
+          longitude={resturant.longitude}
         >
           <FaMapMarker />
         </Marker>
