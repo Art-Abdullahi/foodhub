@@ -13,6 +13,7 @@ export default class Switch extends Component {
       openingHours,
       category,
       location,
+
       website,
       phoneNumber,
       reviews,
@@ -86,7 +87,7 @@ export default class Switch extends Component {
             </div>
           </TabPanel>
           <TabPanel>
-            <Map />
+            <Map coordinates={this.props} />
           </TabPanel>
         </Tabs>
       </div>

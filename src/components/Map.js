@@ -1,37 +1,36 @@
-import React, { Component } from "react";
+import * as React from "react";
+import { useState } from "react";
+import ReactMapGL, { Marker } from "react-map-gl";
+import { data } from "../Data";
+import { FaMapMarker } from "react-icons/fa";
+const Map = () => {
+  const [viewport, setviewport] = useState({
+    width: "90vw",
+    height: "70vh",
+    latitude: 1.4419683,
+    longitude: 38.4313975,
+    zoom: 8,
+  });
+  return (
+    <ReactMapGL
+      {...viewport}
+      mapStyle="mapbox://styles/abdull143/ckbawf16a02wf1imufhdfxhfz"
+      mapboxApiAccessToken="pk.eyJ1IjoiYWJkdWxsMTQzIiwiYSI6ImNrYmF2OTRvYjBhZDgycm14a3ZoZ3BsNXAifQ.5gNup6QtTGYC0N758Z9ugw"
+      onViewportChange={(viewport) => {
+        setviewport(viewport);
+      }}
+    >
+      {data.map((resturant) => (
+        <Marker
+          key={resturant.id}
+          latitude={resturant.coordinates[1]}
+          longitude={resturant.coordinates[0]}
+        >
+          <FaMapMarker />
+        </Marker>
+      ))}
+    </ReactMapGL>
+  );
+};
 
-export default class Map extends Component {
-  componentDidMount() {
-    this.renderMap();
-  }
-
-  renderMap = () => {
-    loadScript(
-      "https://maps.googleapis.com/maps/api/js?key=AIzaSyBpRwYDVkd2uL6QKUkJDeYpgSrf1XWutCQ&callback=initMap"
-    );
-    window.initMap = this.initMap;
-  };
-
-  initMap = () => {
-    var map = new window.google.maps.Map(document.getElementById("map"), {
-      center: { lat: -34.397, lng: 150.644 },
-      zoom: 8,
-    });
-  };
-  render() {
-    return (
-      <div id="map">
-        <h1>Map</h1>
-      </div>
-    );
-  }
-}
-
-function loadScript(url) {
-  var index = window.document.getElementsByTagName("script")[0];
-  var script = window.document.createElement("script");
-  script.src = url;
-  script.async = true;
-  script.defer = true;
-  index.parentNode.insertBefore(script, index);
-}
+export default Map;
