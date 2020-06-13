@@ -36,6 +36,8 @@ class Details extends Component {
                             website={key.website}
                             phoneNumber={key.phoneNumber}
                             reviews={key.reviews}
+                            longitude={key.longitude}
+                            latitude={key.latitude}
                           />
                         </div>
                       </div>
