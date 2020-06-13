@@ -100,7 +100,7 @@ body {
   font-weight: bolder;
 }
 
-#map {
+.leaflet-container {
   height: 100vh;
 }
 

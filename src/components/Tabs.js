@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import Map from "./Map";
+
 import { FaStar } from "react-icons/fa";
 import "react-tabs/style/react-tabs.css";
 import image from "../images/avatar.svg";
+import Mapping from "./Map";
 export default class Switch extends Component {
   componentDidMount() {
     window.scroll(0, 0);
@@ -13,8 +14,7 @@ export default class Switch extends Component {
       openingHours,
       category,
       location,
-      longitude,
-      latitude,
+
       website,
       phoneNumber,
       reviews,
@@ -88,7 +88,7 @@ export default class Switch extends Component {
             </div>
           </TabPanel>
           <TabPanel>
-            <Map latitude={latitude} longitude={longitude} />
+            <Mapping />
           </TabPanel>
         </Tabs>
       </div>
