@@ -25,7 +25,10 @@ export default class Navigator extends Component {
           >
             <ul>
               <li>
-                <Link to="/">Resturants</Link>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/resturants">Resturants</Link>
               </li>
               <li>
                 <Link to="/about">About</Link>

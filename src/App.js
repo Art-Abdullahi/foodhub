@@ -5,7 +5,7 @@ import "./App.css";
 import { Switch, Route } from "react-router-dom";
 
 import Home from "./components/Home";
-
+import Resturants from "./components/Resturants";
 import About from "./components/About";
 import Details from "./components/Details";
 import NotFoundPage from "./components/NotFoundPage";
@@ -17,6 +17,11 @@ function App() {
 
       <Switch>
         <Route exact path="/" render={(props) => <Home {...props} />} />
+        <Route
+          exact
+          path="/resturants"
+          render={(props) => <Resturants {...props} />}
+        />
         <Route exact path="/about" render={(props) => <About {...props} />} />
         <Route
           exact
