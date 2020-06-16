@@ -24,7 +24,10 @@ export default class Switch extends Component {
       <div>
         <Tabs>
           <TabList
-            style={{ background: "#f59600", color: "rgba(54, 51, 51, 1)" }}
+            style={{
+              background: "#f59600",
+              color: "rgba(54, 51, 51, 1)",
+            }}
           >
             <Tab>INFORMATION</Tab>
             <Tab>REVIEWS</Tab>

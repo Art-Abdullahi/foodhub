@@ -8,6 +8,7 @@ import Home from "./components/Home";
 import Resturants from "./components/Resturants";
 import About from "./components/About";
 import Details from "./components/Details";
+import Footer from "./components/Footer";
 import NotFoundPage from "./components/NotFoundPage";
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         />
         <Route exact component={NotFoundPage} />
       </Switch>
+      <Footer />
     </div>
   );
 }
