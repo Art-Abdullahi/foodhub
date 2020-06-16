@@ -4,7 +4,7 @@ import Resturant from "./Resturant";
 export default class ResturantList extends Component {
   render() {
     return (
-      <div>
+      <div className="grid container-fluid">
         {this.props.resturants.map((resturant) => (
           <Resturant
             key={resturant.id}

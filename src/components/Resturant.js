@@ -1,6 +1,7 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 
-export default class Resturant extends Component {
+class Resturant extends Component {
   goToDetails = (id) => {
     this.props.history.push({
       pathname: `/details/${this.props.resturant.id}`,
@@ -32,3 +33,5 @@ export default class Resturant extends Component {
     );
   }
 }
+
+export default withRouter(Resturant);
