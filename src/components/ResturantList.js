@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Resturant from "./Resturant";
 
 export default class ResturantList extends Component {
-  componentDidMount() {}
   render() {
     return (
       <div>
@@ -10,7 +9,7 @@ export default class ResturantList extends Component {
           <Resturant
             key={resturant.id}
             resturant={resturant}
-            resturants={resturant}
+            resturants={this.props.resturants}
           />
         ))}
       </div>
