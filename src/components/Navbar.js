@@ -14,7 +14,7 @@ export default class Navigator extends Component {
     return (
       <>
         <nav className="navBar">
-          <div className="brand-title">FOODHUB</div>
+          <div className="brand-title text-dark">FOODHUB</div>
 
           <FaAlignRight className="toggle-button" onClick={this.Toggle} />
 

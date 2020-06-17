@@ -92,7 +92,7 @@ body {
 
 .fa {
   font-size: 3rem;
-  color: #f59600;
+  color: rgba(54, 51, 51, 1) 35%;
 }
 
 .rate {
@@ -105,6 +105,12 @@ body {
 
 .recent-review {
   display: flex;
+}
+
+.footer-top {
+  background: #f59600;
+  color: black;
+  padding: 80px 0;
 }
 @media (max-width: 480px) {
   .toggle-button {

@@ -14,9 +14,9 @@ export default class Header extends Component {
             We save you the time an hassle involved in reserving a table by
             automating the process by just a couple of clicks.
           </p>
-          <div style={{ display: "flex" }}>
+          <div className="mt-5" style={{ display: "flex" }}>
             <button className="btn">Learn More</button>
-            <button className="btn">Sign Up</button>
+            <button className="btn">Resturants</button>
           </div>
         </div>
         <div className="container">

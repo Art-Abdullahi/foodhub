@@ -13,7 +13,7 @@ export default class Resturants extends Component {
             <React.Fragment>
               <div className="mt-5">
                 <Filter updateFilter={updateFilter} />
-                <div className="grid container-fluid">
+                <div className="grid container-fluid mb-5">
                   {resturants.map((resturant) => (
                     <Info
                       key={resturant.id}
