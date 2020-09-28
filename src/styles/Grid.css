@@ -40,6 +40,7 @@
 }
 .btn:hover {
   opacity: 0.8;
+  outline: none;
 }
 .overflow {
   overflow: hidden;

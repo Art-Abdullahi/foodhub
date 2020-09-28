@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import hero from "../images/hero.svg";
+import { Link } from "react-router-dom";
 
 export default class Header extends Component {
   render() {
@@ -15,8 +16,15 @@ export default class Header extends Component {
             automating the process by just a couple of clicks.
           </p>
           <div className="mt-5" style={{ display: "flex" }}>
-            <button className="btn">Learn More</button>
-            <button className="btn">Resturants</button>
+            <Link to="/about">
+              {" "}
+              <button className="btn">About</button>
+            </Link>
+            <br />
+            <Link to="/resturants">
+              {" "}
+              <button className="btn">Resturants</button>
+            </Link>
           </div>
         </div>
         <div className="container">
